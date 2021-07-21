@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "27356ab3-deb3-4c27-929a-4c8622d60987",
+		"name": "jumpersbow-poc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{jumpers-bow}}/test",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all data",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTUyMzc2MjYsImV4cCI6MTYxNTI1OTIyNn0.JZFVXgn4aQbCBVUiA6pj0ElarG-xLNzHeqZ00bVZ-To",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{jumpers-bow}}/all",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search patient by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MTUyMzc2MjYsImV4cCI6MTYxNTI1OTIyNn0.JZFVXgn4aQbCBVUiA6pj0ElarG-xLNzHeqZ00bVZ-To",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{jumpers-bow}}/search?id=12345",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "12345"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post sensor data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sensorId\":\"123\",\r\n    \"sensor1\":\"12\",\r\n    \"sensor2\":\"14\",\r\n    \"sensor3\":\"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{jumpers-bow}}/sensor",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"sensor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post recording data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sensorId\":\"123\",\r\n    \"sensor1\":\"12\",\r\n    \"sensor2\":\"14\",\r\n    \"sensor3\":\"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{jumpers-bow}}/recording",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"recording"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "activate button",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sensorId\":\"123\",\r\n    \"sensor1\":\"12\",\r\n    \"sensor2\":\"14\",\r\n    \"sensor3\":\"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{jumpers-bow}}/activate",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"activate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query button status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sensorId\":\"123\",\r\n    \"sensor1\":\"12\",\r\n    \"sensor2\":\"14\",\r\n    \"sensor3\":\"20\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{jumpers-bow}}/query",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "admin@triofi.in",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin@1234",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{jumpers-bow}}/auth/login",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new patient data",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{jumpers-bow}}/patient/12345",
+					"host": [
+						"{{jumpers-bow}}"
+					],
+					"path": [
+						"patient",
+						"12345"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
